@@ -7,7 +7,7 @@ var db = new (require('./database.js'))(process.env.DB_URL, process.env.DB_NAME)
 function promptInfo() {
   clear();
   console.log();
-  asciiArt.font('CS19', 'doom', text => {
+  asciiArt.font('CS19', 'Doom', text => {
     console.log(text);
     new Prompt({
       properties: {
@@ -50,7 +50,7 @@ function promptInfo() {
       return new Prompt({ properties: properties }).run(results);
     }).then(results => {
       db.addUser(results).then(() => {
-        asciiArt.font('Thanks!', 'doom', text => {
+        asciiArt.font('Thanks!', 'Doom', text => {
           console.log(text);
           setTimeout(promptInfo, 5000);
         });

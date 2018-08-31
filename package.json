@@ -1,0 +1,30 @@
+{
+  "name": "welcome-wagon",
+  "version": "1.0.0",
+  "description": "A cool cli signup program built for the computer science club's booth",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JD Flamm",
+  "license": "GPL-3.0+",
+  "dependencies": {
+    "ascii-art": "^1.4.3",
+    "clear": "^0.1.0",
+    "mongodb": "^3.1.4",
+    "nodemon": "^1.18.4",
+    "phone-formatter": "0.0.2",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Triforcey/welcome-wagon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Triforcey/welcome-wagon/issues"
+  },
+  "homepage": "https://github.com/Triforcey/welcome-wagon#readme"
+}

@@ -1,6 +1,11 @@
+var chalk = require('chalk');
+
 class Prompt {
   constructor(properties) {
-    this.prompt = require('prompt');
+    var prompt = require('prompt');
+    prompt.message = chalk.white('');
+    prompt.delimiter = ': ' + chalk.green();
+    this.prompt = prompt;
     this.properties = properties;
   }
   run(details) {

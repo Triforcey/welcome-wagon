@@ -1,7 +1,8 @@
 require('dotenv').config();
 
+var chalk = require('chalk');
 var phoneFormatter = require('phone-formatter');
-var asciiArt = require('ascii-art');
+var figlet = require('figlet');
 var clear = require('clear');
 
 var Prompt = require('./prompt.js');
@@ -9,8 +10,8 @@ var db = new (require('./database.js'))(process.env.DB_URL, process.env.DB_NAME)
 function promptInfo() {
   clear();
   console.log();
-  asciiArt.font('CS19', 'Doom', text => {
-    console.log(text);
+  figlet.text('CS19', (err, text) => {
+    console.log(chalk.red(text));
     new Prompt({
       properties: {
         name: {
@@ -52,9 +53,9 @@ function promptInfo() {
       return new Prompt({ properties: properties }).run(results);
     }).then(results => {
       db.addUser(results).then(() => {
-        asciiArt.font('Thanks!', 'Doom', text => {
+        figlet.text('Thanks!', (err, text) => {
           console.log(text);
-          setTimeout(promptInfo, 5000);
+          setTimeout(promptInfo(), 5000);
         });
       });
     });

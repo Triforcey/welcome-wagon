@@ -11,9 +11,9 @@
   "author": "JD Flamm",
   "license": "GPL-3.0+",
   "dependencies": {
-    "ascii-art": "^1.4.3",
     "clear": "^0.1.0",
     "dotenv": "^6.0.0",
+    "figlet": "^1.2.0",
     "mongodb": "^3.1.4",
     "nodemon": "^1.18.4",
     "phone-formatter": "0.0.2",

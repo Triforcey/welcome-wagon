@@ -55,7 +55,7 @@ function promptInfo() {
       db.addUser(results).then(() => {
         figlet.text('Thanks!', (err, text) => {
           console.log(text);
-          setTimeout(promptInfo(), 5000);
+          setTimeout(promptInfo, 5000);
         });
       });
     });

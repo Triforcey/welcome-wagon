@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var phoneFormatter = require('phone-formatter');
 var asciiArt = require('ascii-art');
 var clear = require('clear');
